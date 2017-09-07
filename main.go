@@ -1,7 +1,12 @@
 package main
 
-import "fmt"
+import (
+	"fmt"
+
+	"github.com/DeFiXiK/neural-network/ann"
+)
 
 func main() {
-	fmt.Println("Hello world")
+	network := ann.New(4, 3, 2)
+	fmt.Printf("%#v\n", network.Execute([]float64{1, -1, 1, -1}))
 }
